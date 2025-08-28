@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Panel</title>
+    <link rel="stylesheet" href="stylep.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .input-group {
+            position: relative;
+            margin-bottom: 15px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px 40px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        #person{
+            position: absolute;
+            left: 15px;
+            top: 70%;
+            transform: translateY(-50%);
+            color: gray;
+        }
+        #lock{
+            position: absolute;
+            left: 15px;
+            top: 55%;
+            transform: translateY(-50%);
+            color: gray;
+        }
+        .toggle-password {
+            position: absolute;
+            right: 15px;
+            top: 55%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form action="login.php" method="POST">
+        <div class="input-group">
+            <label for="username">Username</label>
+            <i class="fa fa-user" id="person"></i>
+            <input type="text" id="username" name="username" placeholder="Enter username" required>
+        </div>
+
+        <div class="input-group">
+            <label for="password">Password</label>
+            <div class="password-wrapper">
+                <i class="fa fa-lock" id="lock"></i>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+                <span class="toggle-password" onclick="togglePassword()">👁</span>
+            </div>
+        </div>
+
+        <div class="remember-me">
+            <input type="checkbox" id="remember" name="remember">
+            <label for="remember">Remember Me</label>
+        </div>
+
+        <button type="submit">Login</button>
+        <p class="signup-text">Don't have an account? <a href="signup.html">Sign up</a></p>
+    </form>
+</div>
+
+<script src="scriptlogin.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="stylesign.css">
+    <style>
+        .toggle-password {
+            position: absolute;
+            right: 15px;
+            top: 55%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="signup-container">
+    <h2>Sign Up</h2>
+    <form action="signup.php" method="POST" onsubmit="return validateForm()">
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter username" required>
+        </div>
+
+        <div class="input-group">
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" name="mobile" pattern="[0-9]{10}" placeholder="Enter 10-digit number" required>
+        </div>
+
+        <div class="input-group">
+            <label for="password">Password</label>
+            <div class="password-wrapper">
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+                <span class="toggle-password" onclick="togglePassword1('password')">👁</span>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="confirm_password">Confirm Password</label>
+            <div class="password-wrapper">
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Enter password" required>
+                <span class="toggle-password" onclick="togglePassword1('confirm_password')">👁</span>
+            </div>
+            <p id="error-msg" class="error-msg"></p>
+        </div>
+
+        <div class="input-group">
+            <label for="branch">Select Branch</label>
+            <select name="branch" required>
+                <option value="">-- Select Branch --</option>
+                <option value="CT">Computer Technology</option>
+                <option value="CSE">Computer Science Engineering</option>
+                <option value="IT">Information Technology</option>
+            </select>
+
+            <label for="year">Select Year</label>
+            <select name="year" required>
+                <option value="">-- Select Year --</option>
+                <option value="1st Year">1st Year</option>
+                <option value="2nd Year">2nd Year</option>
+                <option value="3rd Year">3rd Year</option>
+                <option value="4th Year">4th Year</option>
+            </select>
+        </div>
+        
+        <button type="submit">Sign Up</button>
+        <p class="login-text">Already have an account? <a href="index.html">Login</a></p>
+    </form>
+</div>
+
+<script src="scriptsignup.js"></script>
+</body>
+</html>

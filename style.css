@@ -1,0 +1,125 @@
+/* 🌙 Dark Mode & Responsive Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+h2 {
+    margin-top: 50px;
+    color: #ffcc00;
+}
+
+/* 📝 File List Styling */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #333;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ⭐ Rating System */
+form {
+    margin-top: 10px;
+}
+
+select {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background: #444;
+    color: white;
+    cursor: pointer;
+}
+
+button {
+    background: #ffcc00;
+    color: #000;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form select {
+    padding: 7px;
+    border-radius: 5px;
+    background: #444;
+    color: white;
+}
+
+form button {
+    background: #ffcc00;
+    padding: 7px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #ffaa00;
+}
+
+/* 🛑 Delete Button */
+.delete-btn {
+    background: #ff4444;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #cc0000;
+}
+
+
+/* 📱 Responsive Design */
+@media (max-width: 786px) {
+    .container {
+        width: 90%;
+        flex-direction: column; /* Mobile me vertical layout */
+        align-items: center;
+    }
+
+    ul li {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    button, .delete-btn {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
